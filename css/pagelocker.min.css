@@ -1,0 +1,2 @@
+form#blueprints .tabs-content.locked{position:relative}form#blueprints .tabs-content.locked::before{content:"";position:absolute;z-index:999;top:0;right:0;bottom:0;left:0}#admin-mode-toggle.locked,#titlebar-button-delete.locked,#titlebar-button-move.locked,#titlebar-save.locked{display:none!important}
+/*# sourceMappingURL=pagelocker.min.css.map */

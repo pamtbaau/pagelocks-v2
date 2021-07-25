@@ -1,0 +1,1 @@
+{"version":3,"sources":["../build/scss/pagelocks-admin.scss"],"names":[],"mappings":"AAAA,aACI,MAAA","sourcesContent":[".fa.fa-close {\n    color: red;\n}\n"]}

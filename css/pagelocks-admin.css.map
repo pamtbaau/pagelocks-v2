@@ -1,0 +1,1 @@
+{"version":3,"sources":["../build/scss/pagelocks-admin.scss","pagelocks-admin.css"],"names":[],"mappings":"AAAA;EACI,UAAA;ACCJ","file":"pagelocks-admin.css","sourcesContent":[".fa.fa-close {\n    color: red;\n}\n",".fa.fa-close {\n  color: red;\n}\n\n/*# sourceMappingURL=pagelocks-admin.css.map */\n"]}

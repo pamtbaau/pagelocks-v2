@@ -1,0 +1,22 @@
+form#blueprints .tabs-content.locked {
+  position:relative; 
+} 
+
+form#blueprints .tabs-content.locked::before {
+  content:'';
+  position:absolute;
+  z-index:999;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+}
+
+#titlebar-button-delete,
+#titlebar-button-move,
+#titlebar-save,
+#admin-mode-toggle {
+  &.locked {
+    display: none !important;
+  }
+}

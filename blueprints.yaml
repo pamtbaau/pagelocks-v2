@@ -1,0 +1,58 @@
+name: PageLocks
+slug: pagelocks
+type: plugin
+version: 1.0.0-beta
+description: Set lock on page when edited in Admin by user
+icon: lock
+author:
+  name: Netzhexe
+  email: ak@netzhexe.de
+homepage: https://github.com/skinofthesoul/grav-plugin-pagelocks
+keywords: grav, plugin, editing, multiuser
+bugs: https://github.com/skinofthesoul/grav-plugin-pagelocks/issues
+docs: https://github.com/skinofthesoul/grav-plugin-pagelocks/blob/master/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    expiresAfter:
+      type: text
+      label: PLUGIN_PAGELOCKS.EXPIRESAFTER
+      help: PLUGIN_PAGELOCKS.EXPIRESAFTER_HELP
+      validate:
+        type: int
+    keepAliveInterval:
+      type: number
+      label: PLUGIN_PAGELOCKS.KEEPALIVEINTERVAL
+      validate:
+        type: int
+    productionMode:
+      type: toggle
+      label: PLUGIN_PAGELOCKS.PRODUCTIONMODE
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO
+    debug:
+      type: toggle
+      label: PLUGIN_PAGELOCKS.DEBUG
+      highlight: 0
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO

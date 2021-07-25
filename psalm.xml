@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<psalm
+    errorLevel="3"
+    resolveFromConfigFile="true"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+>
+    <projectFiles>
+        <file name="pagelocks.php" />
+        <directory name="classes" />
+        <directory name="tests/acceptance" />
+        <directory name="tests/unit" />
+        <ignoreFiles>
+            <directory name="vendor" />
+        </ignoreFiles>
+    </projectFiles>
+    <issueHandlers>
+        <UndefinedClass>
+            <errorLevel type="suppress">
+                <referencedClass name="AcceptanceTester" />
+            </errorLevel>
+        </UndefinedClass>
+        <PropertyNotSetInConstructor>
+            <errorLevel type="suppress">
+                <directory name="tests/unit" />
+            </errorLevel>
+        </PropertyNotSetInConstructor>
+    </issueHandlers>
+</psalm>

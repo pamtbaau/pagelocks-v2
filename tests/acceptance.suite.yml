@@ -1,0 +1,17 @@
+actor: AcceptanceTester
+modules:
+    enabled:
+        - WebDriver:
+             url: http://dev-dev
+             window_size: false # disabled in ChromeDriver
+             port: 9515
+             browser: chrome
+             capabilities:
+                'goog:chromeOptions':
+                    args:
+                        - start-maximized
+                    # javascriptEnabled: true
+        - \Helper\Acceptance
+
+# Note: 
+# - Run chromedriver: chromedriver --url-base=/wd/hub

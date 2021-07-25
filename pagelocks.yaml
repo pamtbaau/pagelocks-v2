@@ -1,0 +1,5 @@
+enabled: true
+expiresAfter: 3600            # Lock expires after x seconds of no keepAlive pings
+keepAliveInterval: 60         # Send every x seconds a keepAlive ping to server
+productionMode: true          # Add minified assets if true
+debug: false                  # If true, write a log to data/pagelocks/debug.log

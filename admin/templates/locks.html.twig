@@ -1,0 +1,36 @@
+{% extends 'partials/base.html.twig' %}
+
+{% if admin.route %}
+    {% set context = admin.page(true) %}
+{% endif %}
+
+{% block titlebar %}
+    <h1><i class="fa fa-fw fa-lock"></i> {{ "PLUGIN_PAGELOCKS.LOCKS"|tu }}</h1>
+{% endblock %}
+
+{% block content %}
+    <h1>{{ "PLUGIN_PAGELOCKS.LOCKSBYUSERS"|tu }}</h1>
+
+    <div class="admin-block">
+        <table>
+            <thead>
+                <th class="author">{{ "PLUGIN_PAGELOCKS.TH_USER"|tu }}</th>
+                <th class="route">{{ "PLUGIN_PAGELOCKS.TH_PAGE"|tu }}</th>
+                <th class="last-seen">{{ "PLUGIN_PAGELOCKS.TH_LASTACTIVE"|tu }}</th>
+                <th class="delete"></th>
+            </thead>
+            <tbody id="locklist">
+                {# {% for email, lock in pagelocks.locks %}
+                    <tr>
+                        <td class="author">{{email}}</td>
+                        <td class="route">{{lock.route}}</td>
+                        <td class="last-seen">{{ lock.timestamp }}</td>
+                    </tr>
+                {% endfor %} #}
+            </tbody>
+        </table>
+
+    </div>
+{% endblock %}
+
+

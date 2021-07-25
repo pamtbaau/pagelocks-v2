@@ -1,0 +1,62 @@
+{
+  "name": "netzhexe/pagelocks",
+  "type": "grav-plugin",
+  "description": "Locks Grav pages when user is editing the page",
+  "keywords": [
+    "plugin"
+  ],
+  "homepage": "https://github.com/skinofthesoul/grav-plugin-pagelocks",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Netzhexe",
+      "email": "ak@netzhexe.de",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.3.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Grav\\Plugin\\PageLocks\\": "classes/"
+    },
+    "classmap": [
+      "pagelocks.php"
+    ]
+  },
+  "config": {
+    "platform": {
+      "php": "7.3.6"
+    }
+  },
+  "require-dev": {
+    "codeception/codeception": "^4.1",
+    "codeception/module-phpbrowser": "^1.0.0",
+    "codeception/module-asserts": "^1.0.0",
+    "codeception/module-webdriver": "^1.1",
+    "fakerphp/faker": "^1.9",
+    "getgrav/grav": "1.7.16",
+    "rockettheme/toolbox": "^1.5",
+    "vimeo/psalm": "^4.8"
+  },
+  "scripts": {
+    "psalm": "psalm --show-info=true",
+    "test": [
+      "@test-acceptance",
+      "@test-unit"
+    ],
+    "test-acceptance": [
+      "@setpath",
+      "cd $SITEPATH && $PAGELOCKS/vendor/bin/codecept -c $PAGELOCKS/codeception.yml run acceptance"
+    ],
+    "test-unit": [
+      "@setpath",
+      "cd $SITEPATH && php $PAGELOCKS/vendor/bin/codecept -c $PAGELOCKS/codeception.yml run unit"
+    ],
+    "setpath": [
+      "@putenv SITEPATH=/www/grav/site-dev",
+      "@putenv PAGELOCKS=/www/grav/site-dev/user/plugins/pagelocks"
+    ]
+  }
+}

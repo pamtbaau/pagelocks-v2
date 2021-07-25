@@ -1,0 +1,55 @@
+en:
+  PLUGIN_PAGELOCKS:
+    EXPIRESAFTER: Locks expire after (seconds)
+    EXPIRESAFTER_HELP: Number of seconds before locks expires
+    LOCKS: Locks
+    LOCKSBYUSERS: Locks held by users
+    KEEPALIVEINTERVAL: how often to extend a lock, in seconds
+    PRODUCTIONMODE: production mode (minifies assets)
+    DEBUG: debugging mode
+    TH_USER: User
+    TH_PAGE: Page
+    TH_LASTACTIVE: Last active on page
+    
+    ALERT:
+      LOCK_REMOVED: Lock has been removed successfully.
+      LOCK_NOT_REMOVED: Lock has NOT been removed.
+      ALREADY_LOCKED: |
+        %s is currently editing this page. 
+        Please try again later, or contact %s to coordinate editing of page.
+      CONFIRM_DELETE: Have you confirmed the page is no longer being edited by %s?
+      LOCK_GRANTED: Lock has been acquired successfully
+      LOCK_DENIED: Lock has NOT been granted
+      LOCK_EXPIRED: |
+        Lock on page has expired or has been removed. Refresh page to acquire new lock. 
+        Your changes will not be saved.
+      LOCK_EXTENDED: Lock has been extended
+      LOCK_COUNT: Found %s lock(s)
+
+de:
+  PLUGIN_PAGELOCKS:
+    EXPIRESAFTER: Sperre endet nach (Sekunden)
+    EXPIRESAFTER_HELP: Zahl der Sekunden, bevor eine Seitensperre abläuft
+    LOCKS: Seitensperren
+    LOCKSBYUSERS: Seitensperren von Benutzer:innen
+    KEEPALIVEINTERVAL: Abstand in dem eine Sperre erneuert wird (Sekunden)
+    PRODUCTIONMODE: Produktionsmodus (minifiziert Javascript und CSS)
+    DEBUG: Fehlersuche-Modus
+    TH_USER: Benutzer:in
+    TH_PAGE: Seite
+    TH_LASTACTIVE: Letzte Aktivität
+    
+    ALERT:
+      LOCK_REMOVED: Seitensperre wurde erfolgreich aufgehoben.
+      LOCK_NOT_REMOVED: Seitensperre wurde NICHT aufgehoben.
+      ALREADY_LOCKED: |
+        '%s bearbeitet gerade diese Seite. 
+        Bitte später nochmal versuchen, oder Kontakt mit %s aufnehmen.'
+      CONFIRM_DELETE: Wird diese Seite sicher nicht mehr von %s bearbeitet?
+      LOCK_GRANTED: Seite wurde erfolgreich gesperrt.
+      LOCK_DENIED: Seite wurde NICHT gesperrt.
+      LOCK_EXPIRED: |
+        Seitensperre ist abgelaufen oder wurde entfernt. Bitte neu laden für eine neue Sperre. 
+        Änderungen werden dabei nicht gespeichert.
+      LOCK_EXTENDED: Seitensperre wurde verlängert
+      LOCK_COUNT: '%s Seitensperre(n) gefunden'
